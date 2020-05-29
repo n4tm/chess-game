@@ -7,11 +7,7 @@ import java.util.stream.Collectors;
 import javachessgame.boardgame.Board;
 import javachessgame.boardgame.Piece;
 import javachessgame.boardgame.Position;
-import javachessgame.chess.pieces.Bishop;
-import javachessgame.chess.pieces.King;
-import javachessgame.chess.pieces.Knight;
-import javachessgame.chess.pieces.Pawn;
-import javachessgame.chess.pieces.Rook;
+import javachessgame.chess.pieces.*;
 
 public class ChessMatch {
     private int turn;
@@ -204,6 +200,7 @@ public class ChessMatch {
         placeNewPiece('c', 1, new Bishop(board, Color.WHITE));
         placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
         placeNewPiece('e', 1, new King(board, Color.WHITE));
+        placeNewPiece('d', 1, new Queen(board, Color.WHITE));
 
         for (char c : columns) {
             placeNewPiece(c, 7, new Pawn(board, Color.BLACK));
@@ -215,5 +212,6 @@ public class ChessMatch {
         placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
         placeNewPiece('f', 8, new Bishop(board, Color.BLACK));
         placeNewPiece('e', 8, new King(board, Color.BLACK));
+        placeNewPiece('d', 8, new Queen(board, Color.BLACK));
     }
 }
